@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Collection" Version="9.0.0" />
+		<PackageReference Include="FluentValidation" Version="11.7.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.11" />
+		<PackageReference Include="TimeZoneConverter" Version="6.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\EGIDTask.Domain\EGIDTask.Domain.csproj" />
+	  <ProjectReference Include="..\EGIDTask.Enums\EGIDTask.Enums.csproj" />
+	</ItemGroup>
+
+</Project>

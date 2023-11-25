@@ -1,0 +1,6 @@
+@EGIDTask.API_HostAddress = http://localhost:5243
+
+GET {{EGIDTask.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

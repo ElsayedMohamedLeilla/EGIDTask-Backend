@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EGID.Helpers\EGIDTask.Helpers.csproj" />
+    <ProjectReference Include="..\EGIDTask.Contract\EGIDTask.Contract.csproj" />
+    <ProjectReference Include="..\EGIDTask.Data\EGIDTask.Data.csproj" />
+    <ProjectReference Include="..\EGIDTask.Domain\EGIDTask.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
