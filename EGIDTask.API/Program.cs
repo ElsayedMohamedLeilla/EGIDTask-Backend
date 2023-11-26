@@ -3,6 +3,7 @@ using EGIDTask.API.MiddleWares;
 using EGIDTask.BusinessLogic;
 using EGIDTask.Data;
 using EGIDTask.Data.UnitOfWork;
+using EGIDTask.Models.AutoMapper;
 using EGIDTask.Repository;
 using EGIDTask.Repository.RepositoryManager;
 using EGIDTask.Validation;
@@ -73,7 +74,7 @@ builder.Services.AddFluentValidationAutoValidation(cpnfig =>
 
 builder.Services.AddAutoMapper((serviceProvider, config) =>
 {
-}, typeof(GetGenaricValidator));
+}, typeof(OrderMapProfile));
 
 WebApplication app = builder.Build();
 IServiceScope serviceScope = app.Services.GetService<IServiceScopeFactory>()

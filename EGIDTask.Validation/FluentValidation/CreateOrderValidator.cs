@@ -15,9 +15,6 @@ namespace EGIDTask.Validation.FluentValidation
 
             RuleFor(model => model.Quantity).GreaterThan(0).
                    WithMessage("Sorry You Must Enter Quantity");
-
-            RuleFor(model => model.Price).GreaterThan(0).
-                    WithMessage("Sorry You Must Enter Price");
         }
     }
 }

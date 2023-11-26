@@ -23,14 +23,14 @@ namespace EGIDTask.Validation.BusinessValidation
                 throw new BusinessValidationException("Sorry Stock Not Found.");
             }
 
-            var checkStockPrice = await repositoryManager
+            /*var checkStockPrice = await repositoryManager
                 .StockRepository.Get(s => s.Id == model.StockId)
                 .Select(s => s.Price)
                 .FirstOrDefaultAsync();
             if (Math.Round(checkStockPrice, 2) != Math.Round(model.Price, 2))
             {
                 throw new BusinessValidationException("Sorry Stock Price Not Correct. Correct Price Is: " + checkStockPrice);
-            }
+            }*/
 
             return true;
         }

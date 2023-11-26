@@ -4,12 +4,14 @@ using EGIDTask.Models.Dtos.Orders;
 
 namespace EGIDTask.Models.AutoMapper
 {
-    public class SchedulePlansMapProfile : Profile
+    public class OrderMapProfile : Profile
     {
-        public SchedulePlansMapProfile()
+        public OrderMapProfile()
         {
             CreateMap<OrderDTO, Order>().ReverseMap();
             CreateMap<StockDTO, Stock>().ReverseMap();
+
+            CreateMap<CreateOrderModel, Order>().ReverseMap();
         }
     }
 }

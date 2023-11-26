@@ -42,6 +42,15 @@ namespace EGIDTask.BusinessLogic.Orders
             #region Insert Order
 
             var order = mapper.Map<Order>(model);
+
+            #region Get Current Price
+
+            order.Price = await repositoryManager.StockRepository
+                .Get(s => s.Id == model.StockId)
+                .Select(x => x.Price).FirstOrDefaultAsync();
+
+            #endregion
+
             repositoryManager.OrderRepository.Insert(order);
             await unitOfWork.SaveAsync();
 
