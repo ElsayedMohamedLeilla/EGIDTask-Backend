@@ -1,6 +1,5 @@
 ﻿using EGIDTask.Contract.BusinessLogic.Orders;
 using EGIDTask.Models.Criteria.Orders;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EGIDTask.API.Controllers
