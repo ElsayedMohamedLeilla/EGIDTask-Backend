@@ -21,9 +21,9 @@ namespace EGIDTask.API.Controllers
             {
                 return BadRequest();
             }
-            var ordersResponse = await stockBL.Get(criteria);
+            var stocksResponse = await stockBL.Get(criteria);
 
-            return Success(ordersResponse.Stocks, ordersResponse.TotalCount);
+            return Success(stocksResponse.Stocks, stocksResponse.TotalCount);
         }
         [HttpGet]
         public async Task<ActionResult> GetForDropDown([FromQuery] GetStocksCriteria criteria)
@@ -32,9 +32,9 @@ namespace EGIDTask.API.Controllers
             {
                 return BadRequest();
             }
-            var ordersResponse = await stockBL.GetForDropDown(criteria);
+            var stocksResponse = await stockBL.GetForDropDown(criteria);
 
-            return Success(ordersResponse.Stocks, ordersResponse.TotalCount);
+            return Success(stocksResponse.Stocks, stocksResponse.TotalCount);
         }
     }
 }

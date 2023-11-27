@@ -60,7 +60,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.UseCamelCasing(true);
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+    options.SerializerSettings.ContractResolver = new DefaultContractResolver() { NamingStrategy = new SnakeCaseNamingStrategy() }; ;
     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
     options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
 });
